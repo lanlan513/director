@@ -27,7 +27,7 @@ const Hero = () => {
             <button className="btn btn-primary" onClick={() => navigate('/courses')}>
               <Play size={16} fill="currentColor" /> 开始学习
             </button>
-            <button className="btn btn-ghost" onClick={() => navigate('/courses?category=director-basics')}>
+            <button className="btn btn-ghost" onClick={() => navigate('/domains/director-basics')}>
               <Compass size={16} /> 从导演基础入门
             </button>
           </div>

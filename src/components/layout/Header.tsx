@@ -36,16 +36,13 @@ const Header = () => {
           <NavLink to="/" end className={linkClass}>
             工作台
           </NavLink>
-          <NavLink to="/courses" className={linkClass}>
-            课程库
-          </NavLink>
           <div className="nav-cat-dropdown">
-            <button className="nav-link nav-cat-trigger">分类 ▾</button>
+            <button className="nav-link nav-cat-trigger">学习领域 ▾</button>
             <div className="dropdown-panel">
               {CATEGORIES.map((c) => (
                 <Link
                   key={c.id}
-                  to={`/courses?category=${c.id}`}
+                  to={`/domains/${c.id}`}
                   className="dropdown-item"
                   onClick={() => setOpen(false)}
                 >
@@ -55,6 +52,9 @@ const Header = () => {
               ))}
             </div>
           </div>
+          <NavLink to="/courses" className={linkClass}>
+            课程库
+          </NavLink>
           <NavLink to="/favorites" className={linkClass}>
             <Heart size={15} /> 收藏
           </NavLink>
@@ -99,7 +99,7 @@ const Header = () => {
             {CATEGORIES.map((c) => (
               <Link
                 key={c.id}
-                to={`/courses?category=${c.id}`}
+                to={`/domains/${c.id}`}
                 className="mobile-cat"
                 onClick={() => setOpen(false)}
               >

@@ -17,7 +17,7 @@ const PracticeEntry = () => {
               每个练习都配有评分标准与参考案例，帮助你把知识转化为作品。
             </p>
           </div>
-          <button className="btn btn-primary" onClick={() => navigate('/courses?category=editing')}>
+          <button className="btn btn-primary" onClick={() => navigate('/domains/editing')}>
             进入练习区 <ArrowRight size={16} />
           </button>
         </div>

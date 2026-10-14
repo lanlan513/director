@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import CoursesPage from './pages/CoursesPage'
 import CourseDetailPage from './pages/CourseDetailPage'
 import FavoritesPage from './pages/FavoritesPage'
+import DomainPage from './pages/DomainPage'
 import NotFoundPage from './pages/NotFoundPage'
 import './components/common/common.css'
 
@@ -14,6 +15,7 @@ const App = () => (
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/domains/:id" element={<DomainPage />} />
           <Route path="/courses" element={<CoursesPage />} />
           <Route path="/courses/:id" element={<CourseDetailPage />} />
           <Route path="/favorites" element={<FavoritesPage />} />
